@@ -1,0 +1,10 @@
+/.env.local
+/vendor/
+.phpunit
+/phpunit.xml
+/.idea/
+*.iml
+.php_cs.cache
+bin
+composer.lock
+vendor

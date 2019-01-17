@@ -1,0 +1,37 @@
+{
+  "name": "sawit/paypal-bundle",
+  "type": "symfony-bundle",
+  "description": "Simple bundle for Paypal integration using RESTful APIs",
+  "keywords": ["Paypal", "payment"],
+  "homepage": "https://github.com/mateusz-sawit/",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mateusz Miklewski",
+      "email": "biuro@sawit.pl"
+    }
+  ],
+  "require": {
+    "php": "^7.1",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "symfony/config": "^3.4|^4.0",
+    "symfony/dependency-injection": "^3.4|^4.0",
+    "symfony/expression-language": "^3.4|^4.0",
+    "symfony/http-kernel": "^3.4|^4.0",
+    "symfony/routing": "^3.4|^4.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.0",
+    "symfony/dotenv": "^4.2",
+    "symfony/var-dumper": "^4.2"
+  },
+  "config": {
+    "bin-dir": "bin",
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": { "Sawit\\PaypalBundle\\": "src" }
+  },
+  "version": "1.0.0"
+}

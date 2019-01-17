@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+        http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+  <services>
+    <service id="sawit.paypal.paypal_client" class="Sawit\PaypalBundle\Services\PaypalRestClient" public="false">
+      <argument>%sawit_paypal.client_id%</argument>
+      <argument>%sawit_paypal.secret%</argument>
+      <argument>%sawit_paypal.test_mode%</argument>
+    </service>
+    <service id="Sawit\PaypalBundle\Services\PaypalService" class="Sawit\PaypalBundle\Services\PaypalService" public="false">
+      <argument type="service" id="sawit.paypal.paypal_client"/>
+    </service>
+  </services>
+</container>
